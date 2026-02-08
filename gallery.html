@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resteranteur — Gallery</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#222}
+    header,footer{background:#0b6;color:#003}
+    .container{width:90%;max-width:1100px;margin:0 auto;padding:1rem}
+    nav ul{list-style:none;padding:0;display:flex;gap:1rem;margin:0}
+    nav a{color:inherit;text-decoration:none}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    .photo{border:1px solid #e5e5e5;border-radius:6px;overflow:hidden}
+    .photo img{display:block;width:100%;height:auto}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Resteranteur</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Gallery</h1>
+    <p>Placeholder images are used here; replace with your photos.</p>
+    <section class="gallery">
+      <figure class="photo"><img src="https://via.placeholder.com/600x400?text=Image+1" alt="Placeholder 1"><figcaption>Image 1</figcaption></figure>
+      <figure class="photo"><img src="https://via.placeholder.com/600x400?text=Image+2" alt="Placeholder 2"><figcaption>Image 2</figcaption></figure>
+      <figure class="photo"><img src="https://via.placeholder.com/600x400?text=Image+3" alt="Placeholder 3"><figcaption>Image 3</figcaption></figure>
+      <figure class="photo"><img src="https://via.placeholder.com/600x400?text=Image+4" alt="Placeholder 4"><figcaption>Image 4</figcaption></figure>
+      <figure class="photo"><img src="https://via.placeholder.com/600x400?text=Image+5" alt="Placeholder 5"><figcaption>Image 5</figcaption></figure>
+      <figure class="photo"><img src="https://via.placeholder.com/600x400?text=Image+6" alt="Placeholder 6"><figcaption>Image 6</figcaption></figure>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Resteranteur</p>
+    </div>
+  </footer>
+</body>
+</html>
