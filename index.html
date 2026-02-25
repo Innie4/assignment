@@ -1,56 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resteranteur — Home</title>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Mini-Tasks Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">Resteranteur</div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
     </div>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Welcome to Resteranteur</h1>
-      <p>Your destination for fine dining and memorable experiences.</p>
-    </section>
+    <main class="container">
+        <header>
+            <h1>Web Dev Challenge</h1>
+            <p>Select a number to reveal your mini-task. You have 15 minutes!</p>
+        </header>
 
-    <section>
-      <h2>Featured</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Fresh Ingredients</h3>
-          <p>We source seasonal produce and craft dishes with care.</p>
-        </article>
-        <article class="card">
-          <h3>Professional Chefs</h3>
-          <p>Our kitchen team blends tradition with creativity.</p>
-        </article>
-        <article class="card">
-          <h3>Private Events</h3>
-          <p>Host your celebration in a warm, elegant setting.</p>
-        </article>
-      </div>
-    </section>
-  </main>
+        <div class="grid" id="taskGrid">
+            <!-- 30 numbers will be generated here -->
+        </div>
+    </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Resteranteur — <a href="contact.html">Contact</a></p>
+    <!-- Name Input Modal -->
+    <div id="nameModal" class="modal">
+        <div class="modal-content glass">
+            <h2>Enter Your Name</h2>
+            <p>To start the challenge, please provide your name.</p>
+            <input type="text" id="userName" placeholder="Your Name" autocomplete="off">
+            <button id="startBtn" class="btn-primary">Start Challenge</button>
+        </div>
     </div>
-  </footer>
+
+    <!-- Task Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content glass">
+            <div class="modal-header">
+                <h2 id="modalTaskTitle">Task Title</h2>
+                <div id="timerDisplay" class="timer">15:00</div>
+            </div>
+            <div class="modal-body">
+                <div id="taskDescription"></div>
+                <div class="task-meta">
+                    <span id="taskTopic" class="badge">Topic</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="closeTaskBtn" class="btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Time Elapsed Alert -->
+    <div id="timeAlert" class="time-alert-overlay">
+        <div class="time-alert-box glass">
+            <h1>TIME ELAPSED!</h1>
+            <p>Your 18 minutes (15 + 3 overtime) are up.</p>
+            <button onclick="location.reload()" class="btn-primary">Try Another Task</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
