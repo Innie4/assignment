@@ -276,27 +276,27 @@ startBtn.addEventListener('click', () => {
 function startTask() {
     modalTaskTitle.innerText = `${userName}'s Challenge`;
 
-    // Build rich task description
-    let content = `<h3 style='color: var(--accent-1); margin-bottom: 0.5rem;'>${currentTask.title}</h3>`;
-    content += `<p style="margin: 0.5rem 0 1.5rem; line-height: 1.5; color: #cbd5e1;">${currentTask.description}</p>`;
-
-    content += `<div class='implementation-grid' style='display: grid; gap: 1.5rem;'>`;
-
-    // Demo View
-    content += `<div>`;
-    content += `<h4 style='font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; color: #94a3b8;'>Reference UI</h4>`;
-    content += `<div style="background: white; padding: 2rem; border-radius: 1rem; color: #333; min-height: 100px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">\n<style>${currentTask.targetCSS}</style>\n${currentTask.targetHTML}\n</div>`;
+    // Build rich task description without code hints
+    let content = `<h3 style='color: var(--accent-1); margin-bottom: 0.5rem; font-size: 1.8rem;'>${currentTask.title}</h3>`;
+    content += `<div style='background: rgba(var(--primary-rgb), 0.1); padding: 0.5rem 1rem; border-radius: 0.5rem; display: inline-block; margin-bottom: 1.5rem; border: 1px solid var(--glass-border);'>`;
+    content += `<span style='color: var(--accent-2); font-weight: 600; font-size: 0.9rem;'>TOPIC: ${currentTask.topic}</span>`;
     content += `</div>`;
 
-    // Code Snippets
-    content += `<div style='text-align: left; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 0.75rem;'>`;
-    content += `<h4 style='font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; color: #94a3b8;'>Structure (HTML)</h4>`;
-    content += `<pre style='background: #000; padding: 10px; border-radius: 5px; font-size: 0.8rem; overflow-x: auto; color: #4ade80;'><code>${currentTask.targetHTML.replace(/</g, "&lt;")}</code></pre>`;
+    content += `<p style="margin: 0.5rem 0 1.5rem; line-height: 1.8; color: #e2e8f0; font-size: 1.1rem;">${currentTask.description}</p>`;
 
-    content += `<h4 style='font-size: 0.9rem; margin-top: 1rem; margin-bottom: 0.5rem; text-transform: uppercase; color: #94a3b8;'>Style (CSS)</h4>`;
-    content += `<pre style='background: #000; padding: 10px; border-radius: 5px; font-size: 0.8rem; overflow-x: auto; color: #3b82f6;'><code>${currentTask.targetCSS}</code></pre>`;
+    content += `<div style='text-align: left; background: rgba(0,0,0,0.3); padding: 2rem; border-radius: 1.5rem; border: 1px solid var(--glass-border);'>`;
+    content += `<h4 style='font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; color: var(--accent-1); letter-spacing: 1px;'>Success Criteria</h4>`;
+
+    content += `<ul style='margin-left: 1.5rem; color: #cbd5e1; line-height: 2;'>`;
+    content += `<li>Replicate the design using proper semantic HTML.</li>`;
+    content += `<li>Apply accurate CSS styling as described.</li>`;
+    content += `<li>Ensure responsiveness and smooth animations where applicable.</li>`;
+    content += `<li>Maintain a clean and professional code structure.</li>`;
+    content += `</ul>`;
     content += `</div>`;
 
+    content += `<div style='margin-top: 2rem; padding: 1rem; background: rgba(16, 185, 129, 0.1); border-radius: 1rem; border: 1px dashed #10b981;'>`;
+    content += `<p style='margin: 0; color: #10b981; font-weight: 600;'>Pro Tip: Focus on the ${currentTask.topic} concepts learned in class!</p>`;
     content += `</div>`;
 
     taskDescription.innerHTML = content;
