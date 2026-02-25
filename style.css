@@ -181,8 +181,10 @@ header p {
     border: 1px solid var(--glass-border);
     border-radius: 2rem;
     padding: 3rem;
-    max-width: 500px;
-    width: 100%;
+    max-width: 800px;
+    width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     transform: scale(0.9);
     transition: 0.3s;
@@ -190,6 +192,20 @@ header p {
 
 .modal.active .glass {
     transform: scale(1);
+}
+
+/* Custom scrollbar for modal */
+.glass::-webkit-scrollbar {
+    width: 8px;
+}
+
+.glass::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.glass::-webkit-scrollbar-thumb {
+    background: var(--glass-border);
+    border-radius: 10px;
 }
 
 @keyframes fadeIn {
